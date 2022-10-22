@@ -86,13 +86,47 @@
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: 2s;
 }
+
+.ex-9-img:hover{
+    filter: grayscale(0.6) sepia(0.5);
+    border-radius: 20px;
+    transform: scale(1.5);
+}
+
+
 .ex-10-icon {
     font-size: 60px;
+    animation: buffering 1s linear infinite;
 }
+
+@keyframes buffering{
+    0%{
+        transform: rotate(1turn);
+    }
+}
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover {
+    animation: little-buffering 2s linear ;
+}
+
+@keyframes little-buffering{
+    0%{
+        transform: rotate(0);
+    }
+    90%{
+        transform: rotate(315deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
